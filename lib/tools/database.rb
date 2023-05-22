@@ -87,7 +87,7 @@ module Tools
 
     def backup_folder
       @backup_folder ||= begin
-        File.join(Rails.root, configuration.backup_folder).tap do |folder|
+        File.join(configuration.backup_folder).tap do |folder|
           FileUtils.mkdir_p(folder)
         end
       end
